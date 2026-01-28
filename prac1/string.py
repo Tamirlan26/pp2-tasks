@@ -13,3 +13,6 @@ print(a.strip())
 price = 59
 txt = f"The price is {price} dollars"
 print(txt)
+#6
+#txt = "We are the so-called "Vikings" from the north." Error
+txt = "We are the so-called \"Vikings\" from the north." # we use escape character
