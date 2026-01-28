@@ -1,10 +1,10 @@
 #1
-print("Hello"); print("How are you?"); print("Bye bye!")
+print("c++"); print("python"); print("Java")
 #2
-#print("Python is fun!") print("Really!") #SyntaxError: invalid syntax
+#print("python") print("KBTU") #SyntaxError: invalid syntax
 #3
-print("Hello World!", end=" ")
-print("I will print on the same line.") #new line
+print("hello", end=" ")
+print("I will print on the same line") #new line
 #4
 print("I am", 35, "years old.") 
 #5
