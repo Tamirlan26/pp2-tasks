@@ -1,23 +1,23 @@
 #1
 def s(n):
     for i in range(n + 1):
-        yield i ** 2
-n = 5
+        yield i**2
+n=5
 for sq in s(n):
     print(sq)
 #2
 def a(n):
-    for i in range(n + 1):
-        if i % 2 == 0:
+    for i in range(n+1):
+        if i%2==0:
             yield i
-n = int(input())
+n=int(input())
 print(','.join(str(x) for x in a(n)))
 #3
 def d(n):
-    for i in range(n + 1):
+    for i in range(n+1):
         if i%3==0 and i%4==0:
             yield i
-n = 50
+n=50
 for c in d(n):
     print(c, end=' ')
 #4

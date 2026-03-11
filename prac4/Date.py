@@ -1,19 +1,19 @@
-#1
+print("1")
 from datetime import datetime, timedelta
 today = datetime.now()
-fda = today - timedelta(days=5)
-print("Five days ago:", fda)
+f = today - timedelta(days=5)
+print("Five days ago:", f)
 #2
 from datetime import datetime, timedelta
-today = datetime.now()
-yesterday = today - timedelta(days=1)
-tomorrow = today + timedelta(days=1)
-print("Yesterday:", yesterday)
-print("Today:", today)
-print("Tomorrow:", tomorrow)
+today=datetime.now()
+yesterday=today-timedelta(days=1)
+tomorrow = today+timedelta(days=1)
+print("Yesterday:",yesterday)
+print("Today:",today)
+print("Tomorrow:",tomorrow)
 #3
 from datetime import datetime
-now = datetime.now()
+now=datetime.now()
 without_microseconds = now.replace(microsecond=0)
 print("Without microseconds:", without_microseconds)
 #4
