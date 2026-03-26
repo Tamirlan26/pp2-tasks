@@ -1,0 +1,3 @@
+file = open("example.txt", "a")
+file.write("\nNew line")
+file.close()
