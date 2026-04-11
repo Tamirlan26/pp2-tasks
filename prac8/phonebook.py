@@ -1,6 +1,6 @@
 from connect import get_connection
 
-# Поиск
+
 def search(pattern):
     conn = get_connection()
     cur = conn.cursor()
@@ -14,7 +14,7 @@ def search(pattern):
     conn.close()
 
 
-# Пагинация
+
 def get_paginated(limit, offset):
     conn = get_connection()
     cur = conn.cursor()
@@ -28,7 +28,7 @@ def get_paginated(limit, offset):
     conn.close()
 
 
-# Upsert
+
 def upsert(name, phone):
     conn = get_connection()
     cur = conn.cursor()
@@ -39,7 +39,7 @@ def upsert(name, phone):
     conn.close()
 
 
-# Массовая вставка
+
 def insert_many(names, phones):
     conn = get_connection()
     cur = conn.cursor()
@@ -50,7 +50,7 @@ def insert_many(names, phones):
     conn.close()
 
 
-# Удаление
+
 def delete(value):
     conn = get_connection()
     cur = conn.cursor()
@@ -61,7 +61,6 @@ def delete(value):
     conn.close()
 
 
-# Тест
 if __name__ == "__main__":
     upsert("Alice", "12345")
     upsert("Bob", "67890")

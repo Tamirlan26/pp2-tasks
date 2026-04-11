@@ -1,4 +1,4 @@
--- 1. Функция поиска по шаблону
+
 CREATE OR REPLACE FUNCTION search_phonebook(pattern TEXT)
 RETURNS TABLE(id INT, name TEXT, phone TEXT)
 AS $$
@@ -12,7 +12,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 2. Функция с пагинацией
+
 CREATE OR REPLACE FUNCTION get_phonebook_paginated(limit_val INT, offset_val INT)
 RETURNS TABLE(id INT, name TEXT, phone TEXT)
 AS $$

@@ -1,4 +1,4 @@
--- 1. Добавить или обновить пользователя
+
 CREATE OR REPLACE PROCEDURE upsert_user(p_name TEXT, p_phone TEXT)
 AS $$
 BEGIN
@@ -14,7 +14,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 2. Вставка нескольких пользователей
+
 CREATE OR REPLACE PROCEDURE insert_many_users(
     names TEXT[],
     phones TEXT[]
@@ -26,7 +26,7 @@ DECLARE
 BEGIN
     FOR i IN 1..array_length(names, 1) LOOP
 
-        -- Проверка телефона (только цифры и длина >= 5)
+        
         IF phones[i] ~ '^[0-9]+$' AND length(phones[i]) >= 5 THEN
 
             IF EXISTS (SELECT 1 FROM phonebook WHERE name = names[i]) THEN
@@ -49,7 +49,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 3. Удаление пользователя
+
 CREATE OR REPLACE PROCEDURE delete_user(p_value TEXT)
 AS $$
 BEGIN
